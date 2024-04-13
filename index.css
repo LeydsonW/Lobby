@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+* {
+    font-family: Lato, sans-serif;
+}
+  
+.telainicial {
+    position: absolute;
+    display:flex;
+    justify-content: center;        /* Justificar tudo no centro */
+    top: 0;                         /* tela cheia */
+    left: 0;                        /* tela cheia */
+    right: 0;                       /* tela cheia */
+    bottom: 0;                      /* tela cheia */
+
+    /* Background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+    /* Animação Background */
+    @keyframes gradient {
+        0% {
+        background-position: 0% 50%;
+        }
+        50% {
+        background-position: 100% 50%;
+        }
+        100% {
+        background-position: 0% 50%;
+        }
+    }
+
+.textolobby {
+    position: absolute;                       /* posição absoluta para poder movimentar o texto */
+    font-size: 50px;                          /* tamanho da fonte */
+    top: 20%;                                 /* distância do topo */
+    color: azure;                       /*fonte transparente */
+}
+
+.botao {
+    position: absolute;
+    top: 50%;
+}
+
+.seta {
+    width: 30px;
+    -webkit-filter: invert();
+    transition: transform 0.5s;
+    transform: translateY(-5px);
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+}
+
+.seta:hover {
+    transition: transform 0.5s;
+    transform: translateY(5px);
+}
+
+.seta:active {
+    transform: translateY(2px);
+}
+
+
+
